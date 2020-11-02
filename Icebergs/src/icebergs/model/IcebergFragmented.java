@@ -1,5 +1,6 @@
 package icebergs.model;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class IcebergFragmented implements IcebergEvent{
@@ -28,4 +29,11 @@ public class IcebergFragmented implements IcebergEvent{
         this.iceberg = iceberg;
         this.icebergsSpawned = icebergsSpawned;
     }
+
+    @Override
+    public String toString() {
+        return "IcebergFragmented{" + "date=" + date + ", iceberg=" + iceberg + ", icebergsSpawned=" + Arrays.toString(icebergsSpawned) + '}';
+    }
+    
+    
 }

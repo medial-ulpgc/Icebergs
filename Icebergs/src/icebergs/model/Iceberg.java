@@ -2,6 +2,7 @@
 package icebergs.model;
 
 import java.util.Date;
+import java.util.Objects;
 
 public class Iceberg {
     
@@ -26,5 +27,27 @@ public class Iceberg {
         this.spawnDate = spawnDate;
         this.origin = origin;
     }
+
+    @Override
+    public String toString() {
+        return "Iceberg{" + "id=" + id + ", spawnDate=" + spawnDate + ", origin=" + origin + '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if( !this.getClass().equals(obj.getClass()) ){
+            return false;
+        }
+        return this.id.equals(((Iceberg)obj).getId());
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 97 * hash + Objects.hashCode(this.id);
+        return hash;
+    }
+    
+    
 
 }

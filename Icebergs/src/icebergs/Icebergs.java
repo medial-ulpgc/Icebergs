@@ -27,6 +27,8 @@ public class Icebergs {
                 repository.addIcebergEvent(new IcebergLocation(new Date(),x,Math.random()*MAPX,Math.random()*MAPY));
             });
         
+        repository.getIcebergs().forEach(System.out::println);
+        repository.getIcebergEvents().forEach(System.out::println);
     }
     
 }

@@ -35,4 +35,10 @@ public class IcebergLocation implements IcebergEvent{
         this.x = x;
         this.y = y;
     }
+
+    @Override
+    public String toString() {
+        return "IcebergLocation{" + "date=" + date + ", iceberg=" + iceberg + ", x=" + x + ", y=" + y + '}';
+    }
+    
 }

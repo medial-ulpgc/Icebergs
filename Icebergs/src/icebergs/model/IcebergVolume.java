@@ -30,6 +30,11 @@ public class IcebergVolume implements IcebergEvent{
         this.volume = volume;
     }
 
+    @Override
+    public String toString() {
+        return "IcebergVolume{" + "date=" + date + ", iceberg=" + iceberg + ", volume=" + volume + '}';
+    }
+
     
     
 }
